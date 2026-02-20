@@ -168,7 +168,6 @@ void installARK4Only() {
     createPspEmuDirectories(0);
     placePspGameData(NULL);
     createBubble(NULL);
-    copySaveFiles();
 }
 
 void installARKXOnly() {
@@ -178,6 +177,7 @@ void installARKXOnly() {
 }
 
 void doInstall() {
+    copySaveFiles();
     installARK4Only();        // 
     installARKXOnly();        // 
     installAnalogPlugin();    // 

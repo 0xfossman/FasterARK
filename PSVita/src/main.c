@@ -164,11 +164,13 @@ int main(int argc, const char *argv[]) {
 
         case 1:
             displayMsg("Installing ARK-4", "Installing ARK-4 only (no plugins)...");
+            copySaveFiles();
             installARK4Only();
             break;
 
         case 2:
             displayMsg("Installing ARK-4 and Analog Plugin", "Installing ARK-4 and analog plugin...");
+            copySaveFiles();
             installARK4Only();
             installAnalogPlugin();
             taiReloadConfig();
@@ -176,6 +178,7 @@ int main(int argc, const char *argv[]) {
 
         case 3:
             displayMsg("Installing Only ARK-X", "Installing Only ARK-X...");
+            copySaveFiles();
             installARKXOnly();
             installPS1Plugin();
             taiReloadConfig();
