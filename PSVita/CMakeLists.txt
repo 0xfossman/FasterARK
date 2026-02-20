@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)  # Aggiornata la versione minima richiesta
+cmake_minimum_required(VERSION 3.10)
 
 if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
   if(DEFINED ENV{VITASDK})
@@ -79,7 +79,7 @@ vita_create_vpk(${PROJECT_NAME}.vpk ${VITA_TITLEID} eboot.bin
   FILE res/rif/psx.rif rif/psx.rif
   FILE res/psp/EBOOT.PBP psp/EBOOT.PBP
   FILE res/psp/PBOOT.PBP psp/PBOOT.PBP
-  FILE res/psx/ps1cfw_enabler.suprx psx/ps1cfw_enabler.suprx
+  FILE res/psp/arkrightanalog.suprx psp/arkrightanalog.suprx
   FILE res/psx/EBOOT.PBP psx/EBOOT.PBP
   FILE res/save/ARK_01234/ARK.BIN save/ARK_01234/ARK.BIN
   FILE res/save/ARK_01234/ARK4.BIN save/ARK_01234/ARK4.BIN
@@ -87,7 +87,6 @@ vita_create_vpk(${PROJECT_NAME}.vpk ${VITA_TITLEID} eboot.bin
   FILE res/save/ARK_01234/FLASH0.ARK save/ARK_01234/FLASH0.ARK
   FILE res/save/ARK_01234/H.BIN save/ARK_01234/H.BIN
   FILE res/save/ARK_01234/ICON0.PNG save/ARK_01234/ICON0.PNG
-  FILE res/save/ARK_01234/IDSREG.PRX save/ARK_01234/IDSREG.PRX
   FILE res/save/ARK_01234/K.BIN save/ARK_01234/K.BIN
   FILE res/save/ARK_01234/LANG.ARK save/ARK_01234/LANG.ARK
   FILE res/save/ARK_01234/MEDIASYN.PRX save/ARK_01234/MEDIASYN.PRX
@@ -95,13 +94,9 @@ vita_create_vpk(${PROJECT_NAME}.vpk ${VITA_TITLEID} eboot.bin
   FILE res/save/ARK_01234/POPS.PRX save/ARK_01234/POPS.PRX
   FILE res/save/ARK_01234/POPSMAN.PRX save/ARK_01234/POPSMAN.PRX
   FILE res/save/ARK_01234/PS1SPU.PRX save/ARK_01234/PS1SPU.PRX
-  FILE res/save/ARK_01234/RECOVERY.PRX save/ARK_01234/RECOVERY.PRX
   FILE res/save/ARK_01234/SAVEDATA.BIN save/ARK_01234/SAVEDATA.BIN
   FILE res/save/ARK_01234/THEME.ARK save/ARK_01234/THEME.ARK
   FILE res/save/ARK_01234/UPDATER.TXT save/ARK_01234/UPDATER.TXT
-  FILE res/save/ARK_01234/USBDEV.PRX save/ARK_01234/USBDEV.PRX
   FILE res/save/ARK_01234/VBOOT.PBP save/ARK_01234/VBOOT.PBP
-  FILE res/save/ARK_01234/VSHMENU.PRX save/ARK_01234/VSHMENU.PRX
   FILE res/save/ARK_01234/XBOOT.PBP save/ARK_01234/XBOOT.PBP
-  FILE res/save/ARK_01234/XMBCTRL.PRX save/ARK_01234/XMBCTRL.PRX
 )
