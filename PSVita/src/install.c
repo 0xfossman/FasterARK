@@ -72,14 +72,13 @@ int installAnalogPlugin() {
 }
 
 int installPS1Plugin() {
-    sceIoMkdir("ur0:tai", 0777);
     updateUi("Checking for ARK-X PS1 Plugin ...");
     int pluginCheck = sceIoOpen("ur0:tai/ps1cfw_enabler.suprx", SCE_O_RDONLY, 0777);
     if(pluginCheck >= 0) {
         sceIoClose(pluginCheck);
-        updateUi("ARK-X PS1 Plugin found, it is recommended to unintall it and update to latest NoPspEmuDrm_mod...");
+        updateUi("ARK-X PS1 Plugin found,\n it is recommended to unintall it\n and update to latest NoPspEmuDrm_mod...");
+        sceKernelDelayThread(5000000);
     }
-    CopyTree("app0:psx/GAME", "ux0:/pspemu/PSP/GAME");
     return 0;
 }
 
@@ -179,7 +178,7 @@ void installARKXOnly() {
 }
 
 void doInstall() {
- installARK4Only();        // 
+    installARK4Only();        // 
     installARKXOnly();        // 
     installAnalogPlugin();    // 
     installPS1Plugin();       // 
@@ -189,4 +188,4 @@ void doInstall() {
 void taiReloadConfig(void) {
     updateUi("Reloading tai config...");
     sceKernelDelayThread(1000000); // 1 second for visibility
-	}
+}
