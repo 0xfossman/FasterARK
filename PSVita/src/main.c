@@ -57,11 +57,11 @@ int main(int argc, const char *argv[]) {
     SceCtrlData pad;
     int selection = 0;
     const char *options[] = {
-        "Install ARK-4, ARK-X and All Plugins",
+        "Install ARK-4, ARK-X and Analog Plugin",
         "Install Only ARK-4 (No Plugins)",
         "Install ARK-4 and Analog Plugin",
+        "Install Only ARK-X",
         "Install Only Analog Plugin",
-        "Install ARK-X and PS1 Plugin",
         "Exit"
     };
     int num_options = sizeof(options) / sizeof(options[0]);
@@ -175,15 +175,15 @@ int main(int argc, const char *argv[]) {
             break;
 
         case 3:
-            displayMsg("Installing Analog Plugin", "Installing Analog plugin...");
-            installAnalogPlugin();
+            displayMsg("Installing Only ARK-X", "Installing Only ARK-X...");
+            installARKXOnly();
+            installPS1Plugin();
             taiReloadConfig();
             break;
 
         case 4:
-            displayMsg("Installing ARK-X and PS1 Plugin", "Installing ARK-X and PS1 plugin...");
-            installARKXOnly();
-            installPS1Plugin();
+            displayMsg("Installing Analog Plugin", "Installing Analog plugin...");
+            installAnalogPlugin();
             taiReloadConfig();
             break;
 

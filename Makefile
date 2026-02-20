@@ -10,7 +10,7 @@ all:
 #	PS Vita
 	mkdir -p PSVita/build
 	cd PSVita/build && cmake .. && make && cd ../../
-	cp PSVita/build/FasterARK.vpk dist/
+	cp PSVita/build/FasterARK.vpk dist/FasterARK_psv.vpk
 
 clean:
 	rm -rf dist
