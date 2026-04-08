@@ -27,11 +27,11 @@ all:
 	cd dist/tmp/ && zip -m -r FasterARK_psp_full.zip * && cd ../../ && mv dist/tmp/FasterARK_psp_full.zip dist/
 	rm -r dist/tmp/
 #	PS Vita Standalone Installer
-	mkdir -p PSVita/build
-	cd PSVita/build && cmake .. && make && cd ../../
-	cp PSVita/build/FasterARK.vpk dist/FasterARK_psvita.vpk
+	# mkdir -p PSVita/build
+	# cd PSVita/build && cmake .. && make && cd ../../
+	# cp PSVita/build/FasterARK.vpk dist/FasterARK_psvita.vpk
 
 clean:
 	rm -rf dist
-	rm -rf PSVita/build
+	# rm -rf PSVita/build
 	make -C PSP clean
